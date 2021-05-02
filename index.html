@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marcin Antczak</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+        crossorigin="anonymous" />
+    <link href="CSS/style.css" rel="stylesheet">
+    <link href="CSS/header.css" rel="stylesheet">
+    <link href="CSS/nav.css" rel="stylesheet">
+    <link href="CSS/section.css" rel="stylesheet">
+    <link href="CSS/footer.css" rel="stylesheet">
+    <script defer src="js/script.js"></script>
+</head>
+
+<body class="body">
+    <div class="container">
+        <header>
+            <h1 class="header">Marcin Antczak</h1>
+            <p><button class="js-header__button header__button">Zmień kolor nagłówka na czarny</button></p>
+            <img class="header__picture" width="210" height="300" src="https://i.postimg.cc/FRcMZSst/Legitymacyjne.jpg"
+                alt="Marcin Antczak">
+        </header>
+        <nav class="nav">
+            <p class="nav__listHeader">Nawigacja po mojej stronie</p>
+            <ul class="nav__list">
+                <li class="nav__listItem"><a class="nav__link" href="#Kilka-słów-o-mnie">Kilka słów o mnie</a></li>
+                <li class="nav__listItem"><a class="nav__link" href="#Cel-na-rok-2022">Cel na rok 2022</a></li>
+                <li class="nav__listItem"><a class="nav__link" href="#Wykształcenie">Wykształcenie</a></li>
+                <li class="nav__listItem"><a class="nav__link" href="#Doświadczenie-zawodowe">Doświadczenie zawodowe</a>
+                </li>
+                <li class="nav__listItem"><a class="nav__link" href="#Zainteresowania">Zainteresowania</a></li>
+            </ul>
+        </nav>
+        <main>
+            <section>
+                <h2 class="section__header" id="Kilka-słów-o-mnie">Kilka słów o mnie</h2>
+                <p>Mam na imię Marcin. W lipcu ubiegłego roku ukończyłem 30 lat. Mieszkam w Bydgoszczy i tutaj się
+                    urodziłem. Na studia wyjechałem do Gdańska ale miłość do mojej małej ojczyzny zwyciężyła i
+                    postanowiłem
+                    powrócić.Tutaj mam kochającą rodzinę i niesamowitych przyjaciół.</p>
+            </section>
+            <section>
+                <h2 class="section__header" id="Cel-na-rok-2022">Cel na rok 2022</h2>
+                <p class="js-sectionAim">Wytrwała nauka i znalezienie pracy w zawodzie programisty.</p>
+                <button class="js-buttonAim section__button">Zmiana celu na niewłaściwy</button>
+            </section>
+            <section>
+                <h2 class="section__header" id="Wykształcenie">Wykształcenie</h2>
+                <h3><span class="section__year">2009-2014:</span></h3>
+                <p>Politechnika Gdańska: Studia magisterskie,
+                    stacjonarne na kierunku Budownictwo, ukończone tytułem
+                    magistra inżyniera</p>
+            </section>
+            <section>
+                <h2 class="section__header" id="Doświadczenie-zawodowe">Doświadczenie zawodowe</h2>
+                <h3><span class="section__year">2016-do dziś:</span></h3>
+                <p>Praca w Firmie <b>"Doka Polska Sp. z o o"</b>
+                    - na stanowisku projektanta</p>
+                <h3><span class="section__year">2014-2016:</span></h3>
+                <p> Praca w Firmie <b>"GOTOWSKI Budownictwo
+                        Komunikacyjne i
+                        Przemysłowe Sp. z o.o."</b>
+                    - na stanowisku
+                    inżyniera budowy <br>(Budowa mostu nad Wisłą w Kamieniu;
+                    Budowa wiaduktu w ciągu ul. Młodzianowskiej w Radomiu;
+                    Budowa linii tramwajowej do Fordonu;
+                    czteromiesięczne doświadczenie w dziale przygotowania produkcji)</p>
+            </section>
+            <section>
+                <p><button class="js-buttonHobby section__button">Ukryj zainteresowania</button></p>
+                <div class="section__hobbyContainer">
+                    <h2 class="section__header section__header--marginTop" id="Zainteresowania">Zainteresowania</h2>
+                    <p>Muszę przyznać że odkrycie największej "zajawki" w moim życiu
+                        (bo większej już chyba nie da się znaleźć) zajęło mi
+                        bardzo dużo czasu. Co ciekawe, w jej kierunku popchnęły mnie dwa lata temu problemy
+                        zdrowotne.
+                        Tą pasją jest <strong>taniec</strong> W dobie panującej pandemii stanowi on dodatkowe
+                        <em>lekarstwo</em>
+                        na samotność i daje solidną dawkę endorfin. Kiedy tańczę <i>bachatę</i> i <i>kizombę
+                        </i> (bo w tych dwóch
+                        stylach się zakochałem), czuję się po prostu niesamowicie szczęśliwy.
+                    <p> Tym co daje mi również dużo radości jest <strong>bieganie długodystansowe</strong>. Kiedy
+                        wracam
+                        do
+                        domu
+                        po
+                        przebiegnięciu 10km znajduję się w stanie euforii a atmosfera na każdych meetingach
+                        biegowych
+                        jest rewelacyjna.
+                    <table class="section__table">
+                        <caption class="section__caption">Moje wyniki w eventach biegowych</caption>
+                        <tr>
+                            <th class="section__tableCell section__tableCell--header" scope="col">Nazwa Eventu</th>
+                            <th class="section__tableCell section__tableCell--header" scope="col">Miejsce</th>
+                            <th class="section__tableCell section__tableCell--header" scope="col">Dystans</th>
+                            <th class="section__tableCell section__tableCell--header" scope="col">Rok</th>
+                            <th class="section__tableCell section__tableCell--header" scope="col">Osiągnięty czas</th>
+                        </tr>
+                        <tr>
+                            <th class="section__tableCell section__tableCell--header" scope="row">2 PKO Bydgoski Festiwal
+                                Biegowy</th>
+                            <td class="section__tableCell" rowspan="3">Bydgoszcz</td>
+                            <td class="section__tableCell" rowspan="3">10km</td>
+                            <td class="section__tableCell">2017</td>
+                            <td class="section__tableCell">53min</td>
+                        </tr>
+                        <tr>
+                            <th class="section__tableCell section__tableCell--header" scope="row">3 PKO Bydgoski Festiwal
+                                Biegowy</th>
+                            <td class="section__tableCell">2018</td>
+                            <td class="section__tableCell">51min</td>
+                        </tr>
+                        <tr>
+                            <th class="section__tableCell section__tableCell--header" scope="row">4 PKO Bydgoski Festiwal
+                                Biegowy</th>
+                            <td class="section__tableCell">2019</td>
+                            <td class="section__tableCell">46min</td>
+                        </tr>
+                    </table>
+
+                </div>
+            </section>
+        </main>
+        <footer class="footer">kontakt mailowy:<a
+                href="mailto:marcin.antczak12@gmail.com">marcin.antczak12@gmail.com</a></footer>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+.section__header {
+    color: mediumblue;
+    text-align: center;
+    background-color: rgb(250, 230, 119);
+    box-shadow: 5px 5px 7px -2px #160A11;
+    text-shadow: 2px 2px 4px #888;
+}
+
+.section__year {
+    color: rgb(253, 149, 52);
+    text-shadow: 1px 1px 1px #888;
+}
+
+.section__hobbyContainer {
+    overflow-x: auto
+}
+
+.section__header--marginTop {
+    margin-top: 5px;
+}
+
+.section__table {
+    font-family: "Lato", sans-serif;
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+.section__tableCell {
+    border: 1px solid;
+    padding: 10px;
+    text-align: center;
+}
+
+.section__caption {
+    text-align: center;
+    margin-bottom: 5px;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px #888;
+}
+
+.section__tableCell--header {
+    background-color: #ffb773;
+}
+
+.section__button {
+    display: block;
+    margin: auto;
+}
+

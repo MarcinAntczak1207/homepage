@@ -1,0 +1,22 @@
+.header {
+    color: mediumblue;
+    background-color: rgb(255, 228, 77);
+    text-align: center;
+    box-shadow: 5px 5px 7px -2px #160A11;
+    text-shadow: 2px 2px 4px #888;
+}
+
+.colorBlack {
+    color: rgb(0, 0, 0);
+}
+
+.header__picture {
+    border-radius: 10px;
+    display: block;
+    margin: auto;
+}
+
+.header__button {
+    display: block;
+    margin: auto;
+}
