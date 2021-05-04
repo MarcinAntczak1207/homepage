@@ -31,7 +31,7 @@ buttonAim.addEventListener("click", () => {
 buttonHobby.addEventListener("click", () => {
     hobbyContainer.classList.toggle("js-hidden");
 
-    if (buttonHobby.classList.contains("js-hidden")) {
+    if (hobbyContainer.classList.contains("js-hidden")) {
         buttonHobby.innerText = "Pokaż zainteresowania";
     } else { buttonHobby.innerText = "Ukryj zainteresowania" }
 });
