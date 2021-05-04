@@ -12,9 +12,8 @@ let hobbyContainer = document.querySelector(".section__hobbyContainer");
 button.addEventListener("click", () => {
     mainHeader.classList.toggle("colorBlack");
 
-    if (button.innerText === "Zmień kolor nagłówka na czarny") {
-        button.innerText = "Zmień kolor nagłówka na niebieski";
-    } else { button.innerText = "Zmień kolor nagłówka na czarny" }
+    button.innerText = mainHeader.classList.contains("colorBlack") ? "Zmień kolor nagłówka na niebieski" : "Zmień kolor nagłówka na czarny";
+
 });
 
 buttonAim.addEventListener("click", () => {
@@ -32,7 +31,7 @@ buttonAim.addEventListener("click", () => {
 buttonHobby.addEventListener("click", () => {
     hobbyContainer.classList.toggle("js-hidden");
 
-    if (buttonHobby.innerText === "Ukryj zainteresowania") {
+    if (buttonHobby.classList.contains("js-hidden")) {
         buttonHobby.innerText = "Pokaż zainteresowania";
     } else { buttonHobby.innerText = "Ukryj zainteresowania" }
 });
