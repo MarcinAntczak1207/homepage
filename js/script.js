@@ -1,37 +1,72 @@
-console.log("Strona o programiście Marcinie Antczaku");
+{
+    {
+        const welcome = () => {
+            console.log("Strona o programiście Marcinie Antczaku");
+        }
 
-let button = document.querySelector(".js-header__button");
-let mainHeader = document.querySelector(".header");
+        welcome()
+    }
 
-let buttonAim = document.querySelector(".js-buttonAim");
-let aim = document.querySelector(".js-sectionAim");
+    {
+        const button = document.querySelector(".js-header__button");
 
-let buttonHobby = document.querySelector(".js-buttonHobby");
-let hobbyContainer = document.querySelector(".section__hobbyContainer");
+        const onChangeHeaderColorClick = () => {
+            const mainHeader = document.querySelector(".header");
 
-button.addEventListener("click", () => {
-    mainHeader.classList.toggle("colorBlack");
+            mainHeader.classList.toggle("colorBlack");
+            button.innerText = mainHeader.classList.contains("colorBlack") ? "Zmień kolor nagłówka na niebieski" : "Zmień kolor nagłówka na czarny"
+        };
 
-    button.innerText = mainHeader.classList.contains("colorBlack") ? "Zmień kolor nagłówka na niebieski" : "Zmień kolor nagłówka na czarny";
+        const init = () => {
+            button.addEventListener("click", onChangeHeaderColorClick);
+        }
 
-});
+        init()
+    }
 
-buttonAim.addEventListener("click", () => {
+    {
+        const buttonAim = document.querySelector(".js-buttonAim");
 
-    if (aim.innerHTML === "Wytrwała nauka i znalezienie pracy w zawodzie programisty.") {
-        aim.innerHTML = "Dalsza praca w zawodzie budowlanym";
-    } else { aim.innerHTML = "Wytrwała nauka i znalezienie pracy w zawodzie programisty." }
+        const onChangeAimInnerHTML = () => {
+            const aim = document.querySelector(".js-sectionAim");
+            if (aim.innerHTML === "Wytrwała nauka i znalezienie pracy w zawodzie programisty.") {
+                aim.innerHTML = "Dalsza praca w zawodzie budowlanym";
+            } else { aim.innerHTML = "Wytrwała nauka i znalezienie pracy w zawodzie programisty." }
 
-    if (buttonAim.innerText === "Zmiana celu na niewłaściwy") {
-        buttonAim.innerText = "Zmiana celu na właściwy";
-    } else { buttonAim.innerText = "Zmiana celu na niewłaściwy" }
+        }
 
-});
+        const onChangeButtonAimInnerText = () => {
+            if (buttonAim.innerText === "Zmiana celu na niewłaściwy") {
+                buttonAim.innerText = "Zmiana celu na właściwy";
+            } else { buttonAim.innerText = "Zmiana celu na niewłaściwy" }
+        }
 
-buttonHobby.addEventListener("click", () => {
-    hobbyContainer.classList.toggle("js-hidden");
+        const init = () => {
+            buttonAim.addEventListener("click", onChangeAimInnerHTML);
+            buttonAim.addEventListener("click", onChangeButtonAimInnerText);
+        }
 
-    if (hobbyContainer.classList.contains("js-hidden")) {
-        buttonHobby.innerText = "Pokaż zainteresowania";
-    } else { buttonHobby.innerText = "Ukryj zainteresowania" }
-});
+        init();
+    }
+
+    {
+        const buttonHobby = document.querySelector(".js-buttonHobby");
+        const hobbyContainer = document.querySelector(".section__hobbyContainer");
+
+        const onToggleHobbyClassList = () => {
+            hobbyContainer.classList.toggle("js-hidden");
+        }
+
+        const onChangebuttonHobbyText = () => {
+            if (hobbyContainer.classList.contains("js-hidden")) {
+                buttonHobby.innerText = "Pokaż zainteresowania";
+            } else { buttonHobby.innerText = "Ukryj zainteresowania" }
+        }
+        const init = () => {
+            buttonHobby.addEventListener("click", onToggleHobbyClassList);
+            buttonHobby.addEventListener("click", onChangebuttonHobbyText);
+        }
+        init()
+
+    };
+}
