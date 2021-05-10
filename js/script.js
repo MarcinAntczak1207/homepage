@@ -1,72 +1,55 @@
 {
-    {
-        const welcome = () => {
-            console.log("Strona o programiście Marcinie Antczaku");
-        }
+    const welcome = () => {
+        console.log("Strona o programiście Marcinie Antczaku");
+    }
+
+
+
+    const button = document.querySelector(".js-header__button");
+
+    const onChangeHeaderColorClick = () => {
+        const mainHeader = document.querySelector(".js-header");
+
+        mainHeader.classList.toggle("colorBlack");
+        button.innerText = mainHeader.classList.contains("colorBlack") ? "Zmień kolor nagłówka na niebieski" : "Zmień kolor nagłówka na czarny";
+    }
+
+
+
+    const aimButton = document.querySelector(".js-aimButton");
+
+    const onAimButtonClick = () => {
+        const aimElement = document.querySelector(".js-sectionAim");
+
+        aimElement.innerHTML = aimElement.innerHTML === "Wytrwała nauka i znalezienie pracy w zawodzie programisty." ? "Dalsza praca w zawodzie budowlanym" : "Wytrwała nauka i znalezienie pracy w zawodzie programisty."
+
+        aimButton.innerText = aimButton.innerText === "Zmiana celu na niewłaściwy" ? "Zmiana celu na właściwy" : "Zmiana celu na niewłaściwy";
+    }
+
+
+
+    const hobbyButton = document.querySelector(".js-hobbyButton");
+    const hobbyContainer = document.querySelector(".js-section__hobbyContainer");
+
+    const onHobbyButtonClick = () => {
+        hobbyContainer.classList.toggle("js-hidden");
+
+        hobbyButton.innerText = hobbyContainer.classList.contains("js-hidden") ? "Pokaż zainteresowania" : "Ukryj zainteresowania";
+    }
+
+
+
+    const init = () => {
 
         welcome()
+
+        button.addEventListener("click", onChangeHeaderColorClick);
+
+        aimButton.addEventListener("click", onAimButtonClick);
+
+        hobbyButton.addEventListener("click", onHobbyButtonClick);
     }
 
-    {
-        const button = document.querySelector(".js-header__button");
+    init();
 
-        const onChangeHeaderColorClick = () => {
-            const mainHeader = document.querySelector(".header");
-
-            mainHeader.classList.toggle("colorBlack");
-            button.innerText = mainHeader.classList.contains("colorBlack") ? "Zmień kolor nagłówka na niebieski" : "Zmień kolor nagłówka na czarny"
-        };
-
-        const init = () => {
-            button.addEventListener("click", onChangeHeaderColorClick);
-        }
-
-        init()
-    }
-
-    {
-        const buttonAim = document.querySelector(".js-buttonAim");
-
-        const onChangeAimInnerHTML = () => {
-            const aim = document.querySelector(".js-sectionAim");
-            if (aim.innerHTML === "Wytrwała nauka i znalezienie pracy w zawodzie programisty.") {
-                aim.innerHTML = "Dalsza praca w zawodzie budowlanym";
-            } else { aim.innerHTML = "Wytrwała nauka i znalezienie pracy w zawodzie programisty." }
-
-        }
-
-        const onChangeButtonAimInnerText = () => {
-            if (buttonAim.innerText === "Zmiana celu na niewłaściwy") {
-                buttonAim.innerText = "Zmiana celu na właściwy";
-            } else { buttonAim.innerText = "Zmiana celu na niewłaściwy" }
-        }
-
-        const init = () => {
-            buttonAim.addEventListener("click", onChangeAimInnerHTML);
-            buttonAim.addEventListener("click", onChangeButtonAimInnerText);
-        }
-
-        init();
-    }
-
-    {
-        const buttonHobby = document.querySelector(".js-buttonHobby");
-        const hobbyContainer = document.querySelector(".section__hobbyContainer");
-
-        const onToggleHobbyClassList = () => {
-            hobbyContainer.classList.toggle("js-hidden");
-        }
-
-        const onChangebuttonHobbyText = () => {
-            if (hobbyContainer.classList.contains("js-hidden")) {
-                buttonHobby.innerText = "Pokaż zainteresowania";
-            } else { buttonHobby.innerText = "Ukryj zainteresowania" }
-        }
-        const init = () => {
-            buttonHobby.addEventListener("click", onToggleHobbyClassList);
-            buttonHobby.addEventListener("click", onChangebuttonHobbyText);
-        }
-        init()
-
-    };
 }
